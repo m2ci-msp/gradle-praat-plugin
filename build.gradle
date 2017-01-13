@@ -6,8 +6,14 @@ plugins {
 group 'org.m2ci.msp'
 version '0.1.0-SNAPSHOT'
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     compile gradleApi()
+    testCompile gradleTestKit()
+    testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
 }
 
 gradlePlugin {
@@ -17,4 +23,8 @@ gradlePlugin {
             implementationClass = 'org.m2ci.msp.praat.PraatPlugin'
         }
     }
+}
+
+test {
+    useTestNG()
 }
