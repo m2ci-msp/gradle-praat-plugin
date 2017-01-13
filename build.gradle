@@ -1,2 +1,20 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+}
+
 group 'org.m2ci.msp'
 version '0.1.0-SNAPSHOT'
+
+dependencies {
+    compile gradleApi()
+}
+
+gradlePlugin {
+    plugins {
+        simplePlugin {
+            id = 'org.m2ci.msp.praat'
+            implementationClass = 'org.m2ci.msp.praat.PraatPlugin'
+        }
+    }
+}
