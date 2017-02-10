@@ -18,7 +18,7 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        simplePlugin {
+        praatPlugin {
             id = 'org.m2ci.msp.praat'
             implementationClass = 'org.m2ci.msp.praat.PraatPlugin'
         }
