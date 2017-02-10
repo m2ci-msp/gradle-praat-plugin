@@ -27,4 +27,7 @@ gradlePlugin {
 
 test {
     useTestNG()
+    testLogging {
+        exceptionFormat = 'full'
+    }
 }
