@@ -21,17 +21,14 @@ task praatTaskHasPath {
 }
 
 task runPraat(type: PraatExec) {
-    dependsOn 'praat'
     script = "echo 'praatVersion'"
 }
 
 task runPraatScript(type: PraatExec) {
-    dependsOn 'praat'
     script = 'script.praat'
 }
 
 task runPraatListScript(type: PraatExec) {
-    dependsOn 'praat'
     script 'version = praatVersion',
             "echo 'version'"
 }
