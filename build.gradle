@@ -1,6 +1,7 @@
 plugins {
     id 'java-gradle-plugin'
     id 'groovy'
+    id 'com.gradle.plugin-publish' version '0.9.7'
 }
 
 group 'org.m2ci.msp'
@@ -42,5 +43,19 @@ test {
     testLogging {
         exceptionFormat = 'full'
         showStandardStreams = true
+    }
+}
+
+pluginBundle {
+    website = 'https://github.com/m2ci-msp/gradle-praat-plugin'
+    vcsUrl = 'https://github.com/m2ci-msp/gradle-praat-plugin'
+    description = 'Praat Superpowers for Gradle'
+    tags = ['phonetics', 'speech science']
+
+    plugins {
+        praatPlugin {
+            id = 'org.m2ci.msp.praat'
+            displayName = 'Gradle Praat plugin'
+        }
     }
 }
