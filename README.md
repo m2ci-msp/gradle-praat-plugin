@@ -1,5 +1,6 @@
 Gradle Praat Plugin
 ===================
+[![Build Status](https://travis-ci.org/m2ci-msp/gradle-praat-plugin.svg?branch=master)](https://travis-ci.org/m2ci-msp/gradle-praat-plugin)
 
 Provides [Praat](http://praat.org/) (v5.4.22) to Gradle projects via [native wrapper plugin](https://github.com/m2ci-msp/gradle-praat-wrapper-plugin).
 
