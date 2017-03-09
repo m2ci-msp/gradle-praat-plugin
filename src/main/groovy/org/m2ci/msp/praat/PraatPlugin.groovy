@@ -27,5 +27,12 @@ class PraatPlugin implements Plugin<Project> {
                 project.pluginManager.apply(PraatWrapperPlugin)
                 break
         }
+
+        project.afterEvaluate {
+            def praatTask = project.tasks.getByName('praat')
+            project.tasks.withType(PraatExec).each {
+                it.dependsOn praatTask
+            }
+        }
     }
 }
