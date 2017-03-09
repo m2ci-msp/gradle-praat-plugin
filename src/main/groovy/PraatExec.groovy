@@ -11,8 +11,13 @@ class PraatExec extends DefaultTask {
 
     @TaskAction
     void exec() {
-        def scriptFile = project.file(script)
-        if (!scriptFile.canRead() && !scriptFile.isFile()) {
+        def scriptFile
+        try {
+            scriptFile = project.file(script)
+        } catch (all) {
+            project.logger.error "Failed to instantiate scriptFile"
+        }
+        if (!scriptFile || !scriptFile.canRead() && !scriptFile.isFile()) {
             scriptFile = project.file("$temporaryDir/script.praat")
             scriptFile.text = script
         }
