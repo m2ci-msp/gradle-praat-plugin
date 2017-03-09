@@ -8,9 +8,15 @@ version '0.1.0-SNAPSHOT'
 
 repositories {
     jcenter()
+    maven {
+        url 'https://plugins.gradle.org/m2'
+    }
 }
 
 dependencies {
+    ['mac', 'linux', 'windows', 'windows64'].each { platform ->
+        compile group: 'gradle.plugin.org.m2ci.msp', name: platform, version: '0.3'
+    }
     testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
 }
 
