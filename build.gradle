@@ -16,17 +16,9 @@ repositories {
 
 dependencies {
     ['mac', 'linux', 'windows', 'windows64'].each { platform ->
-        compile group: 'gradle.plugin.org.m2ci.msp', name: platform, version: '0.3'
+        compile group: 'gradle.plugin.org.m2ci.msp', name: "praat-wrapper-$platform", version: '0.4'
     }
     testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
-}
-
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        if (details.requested.name == 'praat-wrapper') {
-            details.useTarget group: "gradle.plugin.${details.requested.group}", name: details.requested.name, version: details.requested.version
-        }
-    }
 }
 
 gradlePlugin {
