@@ -4,6 +4,11 @@ Gradle Praat Plugin
 [Unreleased]
 ------------
 
+### Changed
+
+- Upgrade native wrapper plugins
+- Downgrade Praat to v5.4.17 for compatibility with older Linux (Ubuntu Precise)
+
 [v0.1] 2017-03-09
 -------------------
 
