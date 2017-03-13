@@ -8,11 +8,6 @@ jdk:
   - oraclejdk7
   - oraclejdk8
 
-addons:
-  apt:
-    packages:
-    - praat
-
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
