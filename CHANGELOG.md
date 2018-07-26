@@ -6,8 +6,14 @@ Gradle Praat Plugin
 
 ### Changed
 
+- Build with Gradle v4.9
+- Moved PraatExec task class into proper package
 - Upgrade native wrapper plugins
 - Downgrade Praat to v5.4.17 for compatibility with older Linux (Ubuntu Precise)
+
+### Removed
+
+- Support for Java 7
 
 [v0.1] 2017-03-09
 -------------------

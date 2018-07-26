@@ -1,3 +1,5 @@
+package org.m2ci.msp.praat
+
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.*
 
