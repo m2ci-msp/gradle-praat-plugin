@@ -24,6 +24,8 @@ endfor
 You can add a `PraatExec` task like this:
 
 ```gradle
+import org.m2ci.msp.praat.PraatExec
+
 task helloPraat(type: PraatExec) {
   script 'myscript.praat'
 }
@@ -43,7 +45,7 @@ Iteration 3
 You can also execute Praat scripts defined inline in the task:
 
 ```gradle
-task helloPraat(type: PraatExec) {
+task helloPraat(type: org.m2ci.msp.praat.PraatExec) {
   script 'for i to 3',
          "printline Iteration 'i'",
          'endfor'
