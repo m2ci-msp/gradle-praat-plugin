@@ -15,9 +15,7 @@ repositories {
 }
 
 dependencies {
-    ['mac', 'linux', 'windows', 'windows64'].each { platform ->
-        compile group: 'gradle.plugin.org.m2ci.msp', name: "praat-wrapper-$platform", version: '0.4'
-    }
+    compile group: 'gradle.plugin.org.m2ci.msp', name: 'gradle-praat-wrapper-plugin', version: '0.5.1'
     testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
 }
 
