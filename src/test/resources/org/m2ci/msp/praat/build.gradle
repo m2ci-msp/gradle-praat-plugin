@@ -2,6 +2,8 @@ plugins {
     id 'org.m2ci.msp.praat'
 }
 
+import org.m2ci.msp.praat.PraatExec
+
 task hasPlugin {
     doLast {
         assert pluginManager.findPlugin('org.m2ci.msp.praat')
